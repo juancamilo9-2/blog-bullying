@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopBullying: Juntos contra el acoso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: #2575fc;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            margin: 0.5rem auto;
+        }
+        
+        .article {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article h3 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        
+        .case-study {
+            background-color: #f0f7ff;
+            border-left: 4px solid #2575fc;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .case-study h4 {
+            color: #2575fc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-card h3 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .resources ul {
+            list-style-type: none;
+        }
+        
+        .resources li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .resources a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        
+        .resources a:hover {
+            text-decoration: underline;
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quiz-question {
+            margin-bottom: 1rem;
+        }
+        
+        .quiz-options {
+            list-style-type: none;
+        }
+        
+        .quiz-options li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .quiz-options label {
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .quiz-options label:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2575fc;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StopBullying</h1>
+        <p class="subtitle">Juntos contra el acoso escolar y virtual</p>
+    </header>
+    
+    <nav>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#casos">Casos</a>
+        <a href="#juegos">Juegos</a>
+        <a href="#recursos">Recursos</a>
+    </nav>
+    
+    <div class="container">
+        <section id="que-es">
+            <h2 class="section-title">¿Qué es el bullying y ciberbullying?</h2>
+            
+            <div class="article">
+                <h3>Entendiendo el bullying</h3>
+                <p>El bullying o matoneo escolar se refiere a las actitudes intimidatorias de uno o más alumnos contra un estudiante. Es un comportamiento en el cual, de manera constante y deliberada, se hace que otra persona se sienta mal, incómoda, asustada o amenazada, haciendo que aquellos alumnos se sientan intimidados e impotentes, sin poder llegar a defenderse.</p>
+                
+                <p>Esta forma de violencia se caracteriza por tres elementos clave:</p>
+                <ul>
+                    <li><strong>Intencionalidad:</strong> El agresor actúa con el propósito de dañar a la víctima.</li>
+                    <li><strong>Repetición:</strong> No son incidentes aislados, sino conductas que se repiten a lo largo del tiempo.</li>
+                    <li><strong>Desequilibrio de poder:</strong> Existe una diferencia de poder, ya sea física, psicológica o social, entre el agresor y la víctima.</li>
+                </ul>
+            </div>
+            
+            <div class="article">
+                <h3>Ciberbullying: El acoso en la era digital</h3>
+                <p>El ciberbullying es una forma de acoso que utiliza tecnologías digitales como redes sociales, mensajería instantánea, correo electrónico o plataformas de juegos para intimidar, acosar o dañar a otras personas.</p>
+                
+                <p>A diferencia del bullying tradicional, el ciberbullying presenta características particulares:</p>
+                <ul>
+                    <li><strong>24/7:</strong> Puede ocurrir en cualquier momento, incluso cuando la víctima está en casa.</li>
+                    <li><strong>Anonimato:</strong> Los agresores pueden esconderse detrás de perfiles falsos.</li>
+                    <li><strong>Viralidad:</strong> El contenido humillante puede difundirse rápidamente a una amplia audiencia.</li>
+                    <li><strong>Permanencia:</strong> Una vez publicado, es difícil eliminar completamente el contenido de internet.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="tipos">
+            <h2 class="section-title">Tipos de bullying y ciberbullying</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="article">
+                        <h3>Tipos de bullying</h3>
+                        <ul>
+                            <li><strong>Psicológico:</strong> El agresor busca provocar temor en la víctima. Le acecha, persigue, le obliga a hacer cosas que no quiere, manipula e intimida para causar miedo, bajar la autoestima y generar inseguridad.</li>
+                            <li><strong>Físico:</strong> Consiste en empujones, jalones, y puede escalar a golpizas colectivas donde los cómplices apoyan, observan complacidos o indiferentes, e incluso graban las riñas. También incluye hurtos o daños a los objetos de la víctima.</li>
+                            <li><strong>Verbal:</strong> Es el más habitual y se caracteriza por poner apodos, insultar, generar rumores, expresar comentarios raciales o sexistas con la finalidad de discriminar, realizar acciones de exclusión, bromas insultantes y continuas en público.</li>
+                            <li><strong>Exclusión social:</strong> Se genera cuando se ignora, aísla y excluye a quien, según el agresor o grupo, es considerado "tonto", "nerd" o "antisocial". La víctima suele tardar en entender la intención de tal exclusión.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="article">
+                        <h3>Tipos de ciberbullying</h3>
+                        <ul>
+                            <li><strong>Hostigamiento:</strong> Envío repetido de mensajes ofensivos, insultos o amenazas.</li>
+                            <li><strong>Denigración:</strong> Difundir rumores o información falsa sobre alguien para dañar su reputación.</li>
+                            <li><strong>Suplantación de identidad:</strong> Hacerse pasar por la víctima para enviar mensajes inapropiados a otros o publicar contenido vergonzoso.</li>
+                            <li><strong>Violación de intimidad:</strong> Compartir información privada o fotografías personales sin consentimiento.</li>
+                            <li><strong>Exclusión:</strong> Aislar deliberadamente a alguien de grupos o actividades online.</li>
+                            <li><strong>Ciberacoso:</strong> Amenazas intensas y repetidas que generan miedo en la víctima.</li>
+                            <li><strong>Happy slapping:</strong> Grabar agresiones físicas y difundirlas en redes sociales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="casos">
+            <h2 class="section-title">Casos de bullying y ciberbullying</h2>
+            
+            <div class="article">
+                <h3>Experiencias reales</h3>
+                <p>A continuación, presentamos algunos casos basados en situaciones reales (se han modificado nombres y detalles para proteger la privacidad).</p>
+                
+                <div class="case-study">
+                    <h4>El caso de Lucía: Bullying verbal y exclusión social</h4>
+                    <p>Lucía, 14 años, comenzó a experimentar un cambio drástico en sus amistades cuando un grupo de compañeras empezó a criticar su forma de vestir. Lo que comenzó como comentarios aislados se convirtió en una campaña sistemática de burlas y apodos cada vez que participaba en clase. Gradualmente, fue excluida de actividades grupales, almorzaba sola y nadie quería hacer trabajos con ella.</p>
+                    <p>Sus calificaciones bajaron notablemente, comenzó a inventar excusas para no ir al colegio y desarrolló síntomas de ansiedad. La situación cambió cuando una profesora notó estos cambios y organizó sesiones de sensibilización en el aula sobre el impacto del bullying, además de trabajar individualmente con las estudiantes involucradas.</p>
+                </div>
+                
+                <div class="case-study">
+                    <h4>El caso de Carlos: Ciberbullying y suplantación de identidad</h4>
+                    <p>Carlos, 15 años, descubrió que alguien había creado un perfil falso con su nombre en Instagram. El perfil contenía fotografías suyas modificadas con comentarios humillantes y publicaciones ofensivas supuestamente escritas por él, dirigidas a otros compañeros.</p>
+                    <p>Sus amigos comenzaron a distanciarse y Carlos recibía mensajes hostiles de personas que creían que él estaba detrás de esos comentarios ofensivos. Dejó de participar en redes sociales y cayó en depresión. La situación se resolvió cuando denunció el caso al colegio y a la plataforma, identificando al responsable, quien recibió las consecuencias disciplinarias correspondientes.</p>
+                </div>
+                
+                <div class="case-study">
+                    <h4>El caso de Martín: De víctima a defensor</h4>
+                    <p>Martín sufrió bullying físico durante todo un año escolar. Un grupo de compañeros lo empujaba en los pasillos, escondía sus pertenencias y lo ridiculizaba constantemente por su afición a la lectura y su timidez. Gracias al apoyo de su familia y la intervención del departamento de orientación, Martín logró superar esta situación.</p>
+                    <p>Lo más notable es que, años después, Martín decidió crear un grupo de apoyo contra el bullying en su colegio, donde los estudiantes mayores actúan como mentores de los más jóvenes, creando espacios seguros y promoviendo la denuncia de situaciones de acoso.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="juegos">
+            <h2 class="section-title">Juegos educativos sobre bullying</h2>
+            
+            <div class="game-card">
+                <h3>Quiz: ¿Qué tanto sabes sobre el bullying?</h3>
+                <p>Pon a prueba tus conocimientos sobre el bullying y el ciberbullying con este sencillo cuestionario.</p>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p><strong>1. ¿Cuál de las siguientes NO es una característica del bullying?</strong></p>
+                        <ul class="quiz-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="q1" value="a"> Intencionalidad de hacer daño
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q1" value="b"> Ocurre una sola vez
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q1" value="c"> Existe un desequilibrio de poder
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q1" value="d"> Genera sufrimiento en la víctima
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <p><strong>2. El ciberbullying es menos grave que el bullying tradicional porque:</strong></p>
+                        <ul class="quiz-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="q2" value="a"> No involucra contacto físico
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q2" value="b"> Solo ocurre mientras se está conectado
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q2" value="c"> Es más fácil de detener simplemente apagando el dispositivo
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q2" value="d"> Ninguna de las anteriores, el ciberbullying puede ser igual o más dañino
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <p><strong>3. Si observas que un compañero está siendo víctima de bullying, lo mejor es:</strong></p>
+                        <ul class="quiz-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="q3" value="a"> No intervenir para no convertirte también en víctima
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q3" value="b"> Enfrentarte directamente a los agresores
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q3" value="c"> Informar a un adulto de confianza como un profesor o tutor
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="q3" value="d"> Aconsejar a la víctima que debe defenderse sola
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#" class="btn">Verificar respuestas</a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <h3>Juego de rol: "En sus zapatos"</h3>
+                <p>Este ejercicio de empatía ayuda a entender las diferentes perspectivas en situaciones de bullying.</p>
+                <p><strong>Instrucciones:</strong> Divídanse en grupos de 4-5 estudiantes. Cada miembro tomará una tarjeta que indica un rol (víctima, agresor, observador pasivo, defensor, docente). Durante 10 minutos, cada uno debe escribir cómo se sentiría y qué haría desde su rol en una situación de bullying. Luego, comparten sus reflexiones con el grupo.</p>
+                <p><strong>Preguntas para reflexionar:</strong></p>
+                <ul>
+                    <li>¿Cómo te sentiste en tu rol?</li>
+                    <li>¿Qué descubriste al escuchar las perspectivas de los demás?</li>
+                    <li>¿Qué podría hacer cada persona para cambiar la situación?</li>
+                </ul>
+                <a href="#" class="btn">Descargar tarjetas de roles</a>
+            </div>
+            
+            <div class="game-card">
+                <h3>Dilemas éticos: "¿Qué harías tú?"</h3>
+                <p>Un juego para analizar situaciones complejas relacionadas con el bullying y el ciberbullying.</p>
+                <p><strong>Ejemplo de dilema:</strong> "Miguel ve que su mejor amigo, Fernando, está compartiendo capturas de pantalla de conversaciones privadas de Ana, una compañera de clase, en un grupo de WhatsApp para burlarse de ella. Miguel sabe que esto está mal, pero teme perder la amistad de Fernando si le dice algo o lo reporta."</p>
+                <p><strong>Preguntas:</strong></p>
+                <ul>
+                    <li>¿Qué debería hacer Miguel?</li>
+                    <li>¿Cuáles serían las consecuencias de cada posible acción?</li>
+                    <li>¿Qué valores están en juego en esta situación?</li>
+                </ul>
+                <a href="#" class="btn">Ver más dilemas</a>
+            </div>
+        </section>
+        
+        <section id="recursos">
+            <h2 class="section-title">Recursos y ayuda</h2>
+            
+            <div class="article resources">
+                <h3>¿Dónde buscar ayuda?</h3>
+                <ul>
+                    <li><strong>Línea de ayuda contra el bullying:</strong> 140 (teléfono gratuito)</li>
+                    <li><strong>Ministerio de Educación:</strong> <a href="#">Portal de convivencia escolar</a></li>
+                    <li><strong>Instituto Colombiano de Bienestar Familiar (ICBF):</strong> <a href="#">Línea de protección a la infancia</a></li>
+                    <li><strong>Policía de Infancia y Adolescencia:</strong> 123</li>
+                </ul>
+                
+                <h3>Recursos para estudiantes</h3>
+                <ul>
+                    <li><a href="#">Guía para identificar si estás sufriendo bullying</a></li>
+                    <li><a href="#">Estrategias de afrontamiento para víctimas</a></li>
+                    <li><a href="#">Cómo ayudar a un amigo que sufre acoso</a></li>
+                    <li><a href="#">Seguridad digital para adolescentes</a></li>
+                </ul>
+                
+                <h3>Recursos para docentes y padres</h3>
+                <ul>
+                    <li><a href="#">Protocolo de actuación ante casos de bullying</a></li>
+                    <li><a href="#">Actividades para prevenir el acoso en el aula</a></li>
+                    <li><a href="#">Señales de alerta: ¿mi hijo sufre o ejerce bullying?</a></li>
+                    <li><a href="#">Control parental y seguridad en redes sociales</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>StopBullying: Juntos contra el acoso escolar y virtual</p>
+            <p>Creado por Estudiantes de 9° Grado - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
